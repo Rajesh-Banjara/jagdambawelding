@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Form Validation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#btncheck').on('click',function(){
+					
+					if($('#chkTerms').prop('checked')== true){
+						window.location="terms.html";
+					}
+					else if($('#chkTerms').prop('checked')== false){
+						alert('please accept terms and condition');
+						//window.location="termsandcondition.html";
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="chkTerms" id="chkTerms">I agree with terms and condition</br>
+                </label>
+            </div>
+        </div>
+    </div>
+		<div class="form-group">
+        <div class="col-xs-4 col-xs-offset-3">
+            <button type="button" class="btn btn-primary" name="btncheck" id="btncheck" value="check">Next</button>
+        </div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+	<head><title>Form Validation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+       $('#btnnext').on('click',function(){
+			var d,sd,st;
+			d=$("#deluxe").val();
+			sd=$("#semideluxe").val();
+			st=$("#standard").val();
+			if(d==null || sd==null || st==null && d=="" || sd=="" || st==""){
+			alert('fields are empty please provide inputs');
+			}
+				else{
+				window.location="terms.html";
+				}
+					
+        });
+		$('#btnprev').on('click',function(){
+			alert('hello');		
+			window.location="termsandcondition.html";
+        });
+		
+		$("input").keypress(function (e) {
+		if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        $("#errmsg").html("Digits Only").show().fadeOut("slow");
+               return false;
+		}
+		});
+	});
+</script>
+
+  </head>
+ <body> 
+<form id="registrationForm" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Deluxe</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control chknumber"  id="deluxe" name="fname"/><p id="errmsg"></p>
+        </div>
+        
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Semi deluxe</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control chknumber" id="semideluxe" name="email" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Stadandard</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control chknumber" id="standard" name="password" />
+        </div>
+    </div>
+
+    
+    <div class="form-group">
+        <div class="col-xs-4 col-xs-offset-3">
+            <button type="button" class="btn btn-primary" name="signup" id="btnprev" value="Sign up">Prev</button>
+        </div>
+		<div class="col-xs-4">
+            <button type="button" class="btn btn-primary" name="btncheck" id="btnnext" value="Sign up">Next</button>
+        </div>
+    </div>
+		
+</form>
+</body>
+</html>

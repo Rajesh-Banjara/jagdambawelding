@@ -1,0 +1,114 @@
+<html>
+	<head><title>Form Validation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                alert("You are successfully accept our terms and conditions.");
+            }
+            else if($(this).prop("checked") == false){
+                alert("Please accept our terms and conditions.");
+            }
+        });
+		
+					
+		 $('#registrationForm').validate({
+        rules: {
+            fname: {
+                required: true,
+                email: true
+            },
+            email: {
+                required: true,
+                minlength: 5
+            },
+			password: {
+                required: true,
+                minlength: 8
+            }
+        }
+    });
+		
+    });
+</script>
+
+  </head>
+ <body> 
+<form id="registrationForm" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Full name</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="fname"/>
+        </div>
+        
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Email address</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="email" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Password</label>
+        <div class="col-xs-4">
+            <input type="password" class="form-control" name="password" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Gender</label>
+        <div class="col-xs-5">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="gender" value="male" /> Male
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="gender" value="female" /> Female
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="gender" value="other" /> Other
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Terms of use</label>
+        <div class="col-xs-4">
+            <div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;">
+                 Terms of use</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-5 col-xs-offset-3">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="agree" id="agree" value="agree" /> Agree with the terms and conditions
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-4 col-xs-offset-3">
+            <button type="submit" class="btn btn-primary" name="signup" value="Sign up">Submit</button>
+        </div>
+		<div class="col-xs-4">
+            <button type="button" class="btn btn-primary" name="btncheck" id="btncheck" value="Sign up">Next</button>
+        </div>
+    </div>
+</form>
+<>

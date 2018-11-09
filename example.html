@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title> Room Selection </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="customexample.js" type="text/javascript"></script>
+		<style>
+			.divbody{
+				margin-top: 220px;
+				border: thin;
+				background-color: ffe4c4;
+				border-color: black;
+				box-shadow: -5px -10px 5px 10px;
+			}
+
+			.form-body{
+				padding: 20px;
+			}
+
+			.btn-body{
+				padding-left: 70px;
+			}
+
+			.btn{
+				width: 50%;
+			}
+			.error-msg{
+				font-family: sans-serif;
+				font-weight: bold;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="clearfix">
+		</div>
+
+		<div class="row">
+			<div class="col-md-3 col-lg-3">
+				
+			</div>
+			<div class="col-md-6 col-lg-6 divBody">
+				<form class="form-horizontal">
+					<div class="row form-body">
+						<label class="col-md-2 col-sm-2 col-lg-2">Delux:</label>
+						<div class="form-group col-md-2 col-sm-2 col-lg-2 txt-span">
+							<input type="number" class="form-control btnR text-required" name="delux" id="Delux">
+							<!--<span style="color:red;"> </span>-->
+						</div>
+						<label class="col-md-2 col-sm-2 col-lg-2">Semi-Delux:</label>
+						<div class="form-group col-md-2 col-sm-2 col-lg-2 txt-span">
+							<input type="number" class="form-control btnR text-required" name="semi-delux" id="Semi-Delux">
+							<!--<span style="color:red;"> </span>-->
+						</div>
+						<label class="col-md-2 col-sm-2 col-lg-2">Royal:</label>
+						<div class="form-group col-md-2 col-sm-2 col-lg-2 txt-span">
+							<input type="number" class="form-control btnR text-required" name="royal" id="Royal">
+							<!--<span style="color:red;"> </span>-->
+						</div>
+
+					</div>
+					
+					<div class="clearfix">
+					</div>
+
+					<div class="row">
+						<hr>
+					</div>
+
+					<div class="clearfix">
+					</div>
+
+					<!--Button Design-->
+
+					<div class="row btn-body">
+						<div class="col-md-6 col-sm-6 col-lg-6">
+							<button type="button" class="btn btn-success">Next</button>
+						</div>
+						<div class="col-md-6 col-sm-6 col-lg-6">
+							<button type="button" class="btn btn-warning" id="btnPrevious">Previous</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-3 col-lg-3">
+
+			</div>
+		</div>
+	</body>
+</html>
