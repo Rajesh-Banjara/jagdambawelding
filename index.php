@@ -1,3 +1,6 @@
+﻿<?php 
+echo "hello";
+?>
 <htmml>
 <head>
 	<title>Welcome to the Aryan cloth store</title>
